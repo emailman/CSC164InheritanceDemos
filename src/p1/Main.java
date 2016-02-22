@@ -89,6 +89,4 @@ class Cat extends Pet {
                 ", isHouseBroken=" + isHouseBroken +
                 '}';
     }
-
-
 }
