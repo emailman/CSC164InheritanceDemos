@@ -17,7 +17,13 @@ public class Main {
         bird1.breed = "conure";
         bird1.weight = 1;
         bird1.age = 2;
-        bird1.itCanTalk(bird1);
+
+        // Change the bird attribute to talking,
+        // but first check if it's a bird
+        if (bird1 instanceof Bird )
+            bird1.itCanTalk(bird1);
+        else
+            System.out.println("Sorry, only birds can be trained to talk");
 
         // Print info about your pets
         System.out.println(cat1 + "\n\n" + bird1);
