@@ -5,28 +5,28 @@ public class Main {
     public static void main(String[] args) {
 
 	    // Build a pet cat
-        Pet cat1 = new Cat();
-        cat1.name = "missy";
-        cat1.breed = "short hair";
-        cat1.weight = 6;
-        cat1.age = 1;
+        Pet pet1 = new Cat();
+        pet1.name = "missy";
+        pet1.breed = "short hair";
+        pet1.weight = 6;
+        pet1.age = 1;
 
         // Build a pet bird
-        Pet bird1 = new Bird();
-        bird1.name = "tweety";
-        bird1.breed = "conure";
-        bird1.weight = 1;
-        bird1.age = 2;
+        Pet pet2 = new Bird();
+        pet2.name = "tweety";
+        pet2.breed = "conure";
+        pet2.weight = .5;
+        pet2.age = 2;
 
-        // Change the bird attribute to talking,
-        // but first check if it's a bird
-        if (bird1 instanceof Bird )
-            bird1.itCanTalk(bird1);
+        // Change the pet attribute to talking,
+        // but check first if it's a bird
+        if (pet2 instanceof Bird)
+            pet2.learnedToTalk(pet2);
         else
-            System.out.println("Sorry, only birds can be trained to talk");
+            System.out.println("Only birds can learn to talk");
 
         // Print info about your pets
-        System.out.println(cat1 + "\n\n" + bird1);
+        System.out.println(pet1 + "\n\n" + pet2);
     }
 }
 
@@ -36,9 +36,8 @@ abstract class Pet {
     double weight;
     int age;
 
-    void itCanTalk (Pet arg) {
-        Bird bird = (Bird) arg;
-        bird.canTalk = true;
+    void learnedToTalk(Pet arg) {
+        ((Bird) arg).canTalk = true;
     }
 
     @Override
